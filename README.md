@@ -117,9 +117,9 @@ sudo ifdown wlan0; sudo ifup wlan0
 ```
 interface=wlan0
 driver=nl80211
-ssid=motherbox						# update to change name of access point
+ssid=motherbox				# update to change name of access point
 hw_mode=g
-channel=4							# channel access point broadcasts on
+channel=4				# channel access point broadcasts on
 ieee80211n=1
 wmm_enabled=1
 ht_capab=[HT40][SHORT-GI-20][DSSS_CCK-40]
