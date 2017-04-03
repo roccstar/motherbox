@@ -17,7 +17,7 @@ You can use a smaller microSD card if you did not want to purchase a 32GB one bu
 
 Burn the Raspbian Lite image to your microSD card. Once that is complete remove your SD card and insert it back into your computer. This will allow us to modify some files needed to run the Raspberry Pi Zero W as an ethernet device when plugged into your computer via USB.
 
-While it is not require to use a UNIX-like operating system for this task, it makes life a lot easier.
+While it is not required that you use a UNIX-like operating system for this task, it makes life a lot easier.
 
 Once you insert the SD card back into your computer browse to the new drive that pops up named `boot`. Here we will edit the files `config.txt` and `cmdline.txt`.
 
@@ -28,7 +28,7 @@ Find the line that reads `dtoverlay=lirc-rpi` and update it to `dtoverlay=dwc2`.
 
 ### cmdline.txt
 
-Add the following bit right after the word `rootwait`
+Add the following bit right _after_ the word `rootwait`
 
 ```
 modules-load=dwc2,g_ether
@@ -36,8 +36,9 @@ modules-load=dwc2,g_ether
 
 ### Enable SSH
 
-To enable SSH create a blank file called `ssh` in `boot`. Here is an example on Ubuntu 16.04 / elementary OS 0.4
+To enable SSH create a file called `ssh` in `boot`. This file will be removed froom the boot partition after the Raspberry Pi Zero W boots for the first time.
 
+**Ubuntu 16.04 / elementary OS 0.4**
 
 ```
 touch /media/${USER}/boot/ssh && echo "woot" > /media/${USER}/boot/ssh
