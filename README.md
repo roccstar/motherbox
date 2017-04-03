@@ -24,7 +24,7 @@ Once you insert the SD card back into your computer browse to the new drive that
 ### config.txt
 
 
-Find the line that reads `dtoverlay=lirc-rpi` and update it to `dtoverlay=dwc2`.
+Find the line that reads `#dtoverlay=lirc-rpi` and update it to `dtoverlay=dwc2`.
 
 ### cmdline.txt
 
